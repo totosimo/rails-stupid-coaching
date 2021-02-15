@@ -1,0 +1,28 @@
+<h1>Your Coach answers :)</h1>
+<h3> Your question:</h3>
+<p>
+  <%=params[:asked_question]%>
+</p>
+
+<h3> Your coach's answer:</h3>
+
+<p><%=@answer%></p>
+
+
+
+<%= link_to 'Ask a new question', ask_path %>
+
+<%#for the sake of testing%>
+<%
+=begin%>
+ <p>
+  <%if params[:asked_question].last == 'I am going to work'%>
+  <%='Great!'%>
+  <%elsif params[:asked_question].last == '?'%>
+  <%='Silly question, get dressed and go to work!'%>
+  <%else%>
+  <%="I don't care, get dressed and go to work!"%>
+  <%end%>
+</p>
+<%
+=end%>
